@@ -1,0 +1,147 @@
+/* ==============================
+   Table Of Content 
+=================================
+ 1- optons (filtered data) 
+ 2- show all data
+ 3- Add  new task 
+*/
+
+
+/* ==============================
+   1- optons (filtered data) 
+=================================*/
+section {
+    margin: 10px 0;
+}
+
+.home {
+    flex-direction: column;
+}
+
+.home .parent-of-btn {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent-of-btn select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.App.Light .home .parent-of-btn select {
+    background-color: #777;
+    color: #fff;
+}
+
+/* ==============================
+   2- show all data
+=================================*/
+.home .all-tasks {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.home .all-tasks .one-task {
+    width: 300px;
+    border: solid 1px #777;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 200;
+    margin: 10px 1px;
+    transition: all 0.2s;
+    min-height: 142px;
+}
+.home .all-tasks .one-task a{
+    height: 100%;
+}
+
+.home .all-tasks .one-task:hover {
+    border-left: solid 8px whitesmoke;
+    cursor: pointer;
+}
+
+.home .all-tasks .time {
+    text-align: right;
+}
+
+.home .all-tasks .one-task h3 {
+    text-align: center;
+}
+
+.home .all-tasks .one-task li {
+    list-style: inside;
+    text-align: start;
+}
+.App.Dark .all-tasks a{
+    color: #fff;
+}
+
+/* ==============================
+   3- Add  new task 
+=================================*/
+/* .home .add-new-task {} */
+
+/* ==============================
+   4- home-of-form
+=================================*/
+.home-of-form{
+    width: 85%;
+    height: 75%;
+}
+.home-of-form .add-btn-of-items{
+    padding: 9px 15px;
+}
+.home-of-form .add-btn-of-items:hover{
+    color: #333 !important;
+}
+.home-of-form .inp-of-title{
+    width: 100%;
+}
+.home-of-form ul{
+    height: 40%;
+    overflow-y: auto;
+}
+.home-of-form ul li{
+    color: #333;
+    list-style: inside;
+    list-style-position: inside;
+}
+.submit-task-butn{
+    display: flex;
+    justify-content: center;
+}
+.submit-task-butn:hover{
+    background-color: #777 !important;
+    color: #fff !important;
+}
+.home .show-masseg{
+    background-color: whitesmoke;
+    padding: 5px 10px ;
+    color: teal;
+    font-weight: 500;
+    border-radius: 7px;
+    position: fixed;
+    top: 100px;
+    transition: all 1s;
+}
+.home .fa-circle-check{
+    color: teal;
+}
+.end-tasks{
+    border: solid 1px whitesmoke;
+
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+.end-tasks .fa-circle-check{
+    color: whitesmoke;
+}

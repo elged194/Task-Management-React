@@ -1,0 +1,182 @@
+.edit-task {
+  min-height: calc(100vh - 128.64px);
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.font:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+
+/* =======================
+  1- title 
+=========================*/
+
+.edit-task .title-edit-task {
+  padding: 10px;
+  text-align: center;
+}
+
+.edit-task .title-edit-task .fa-pen-to-square {
+  font-size: x-large;
+  margin: 0px 10px;
+  cursor: pointer;
+}
+
+.title-edit-task input {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  width: 25%;
+  text-align: center;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+
+/* =======================
+  2- sub tasks
+  =========================*/
+.edit-task .sub-task {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.sub-task .menuo-sub-task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.menuo-sub-task label{
+cursor: pointer;
+}
+.sub-task .sub-items {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #777;
+  margin: 10px 5px;
+  transition: all 0.3s;
+}
+
+.edit-task .sub-items:hover {
+  border-left: solid 5px #fff;
+}
+
+.sub-items .fa-trash-can {
+  cursor: pointer;
+}
+
+.sub-items .fa-trash-can:hover {
+  color: tomato;
+}
+
+.sub-task #checkbox {
+  width: 15px;
+  height: 15px;
+  accent-color: olivedrab;
+}
+
+/* =======================
+  3- Bottons
+=========================*/
+.edit-task .edit-btn {
+  text-align: center;
+  padding: 10px;
+
+}
+
+.edit-btn button {
+  border: none !important;
+  border-radius: 0;
+  background-color: #777;
+  color: #fff !important;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.edit-btn button:hover {
+  transform: scale(1.1);
+}
+
+.edit-btn .fa-plus {
+  margin-left: 8px;
+}
+
+/* ----- add-new-task --------- */
+.add-new-task-items {
+  background-color: #777;
+  margin: 5px;
+  padding: 0 5px;
+  width: 99%;
+    flex-direction: row;
+}
+
+.Cancel {
+  background-color: tomato;
+  border: none;
+  margin-left: 10px;
+}
+
+.add {
+  background-color: #282c34;
+  border: none;
+  margin-left: 10px;
+}
+
+.Cancel:hover,
+.add:hover {
+  transform: scale(1.1);
+
+}
+
+/* =======================
+  4- Light Mode 
+=========================*/
+
+.App.Light .edit-task {
+  color: #fff;
+}
+
+.App.Light .title-edit-task .fa-pen-to-square {
+  color: #333;
+}
+
+.App.Light .menuo-sub-task {
+  color: #333;
+}
+
+.App.Light .title-edit-task input {
+  color: #333;
+}
+
+.App.Light .edit-task .sub-items:hover {
+  border-left: solid 5px tomato;
+}
+
+/* -------------------------- */
+.add-new-task-items{
+  animation: Add-task 1s 1;
+}
+@keyframes Add-task {
+  0% {
+    scale: 0;
+  }
+
+  50% {
+    scale: 1.1;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+.line-through{
+  text-decoration: line-through;
+}

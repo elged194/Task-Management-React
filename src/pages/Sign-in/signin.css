@@ -1,0 +1,37 @@
+.foget-of-password {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #282c3496;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.App.Light .reset-password {
+    background-color: whitesmoke;
+}
+
+.App.Light .reset-password:hover {
+    background-color: transparent;
+    border: solid 1px whitesmoke;
+    color: whitesmoke;
+}
+
+.App.Light .fa-xmark {
+    color: whitesmoke;
+}
+
+.model .fa-xmark:hover {
+    color: tomato;
+    transform: rotate(90deg);
+    transition: all 1s;
+}
+
+.click-forget:hover {
+    cursor: pointer;
+    color: #777 !important;
+    text-decoration: underline;
+}
