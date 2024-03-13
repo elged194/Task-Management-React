@@ -122,19 +122,8 @@ section {
     background-color: #777 !important;
     color: #fff !important;
 }
-.home .show-masseg{
-    background-color: whitesmoke;
-    padding: 5px 10px ;
-    color: teal;
-    font-weight: 500;
-    border-radius: 7px;
-    position: fixed;
-    top: 100px;
-    transition: all 1s;
-}
-.home .fa-circle-check{
-    color: teal;
-}
+
+
 .end-tasks{
     border: solid 1px whitesmoke;
 

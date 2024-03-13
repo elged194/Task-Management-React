@@ -15,6 +15,7 @@ import { doc, setDoc } from "firebase/firestore";
 import ModelHome from "./model_of_home";
 import AllTasksSecton from "./all_tasks_secton";
 import { useTranslation } from "react-i18next";
+import Snackbar from "../../comp/shaird/snackbar";
 // -----------------------------------------------
 
 const Home = () => {
@@ -89,7 +90,7 @@ const Home = () => {
   const titleOfInput = (e) => settitleTask(e.target.value); // title Of Input
   const itemsOfInput = (e) => setInp(e.target.value); // items Of Input
 
-  const { t} = useTranslation();
+  const { t} = useTranslation(); // Translate Function
 
 
   // ========================================
@@ -200,13 +201,8 @@ const Home = () => {
             )}
 
             {/* show-masseg */}
-            <div
-              style={{ right: showMassage ? "2vh" : "-100vh" }}
-              className="show-masseg"
-            >
-              Task Add successfully{" "}
-              <i className="fa-regular fa-circle-check"></i>
-            </div>
+           <Snackbar showMassage={showMassage}/>
+           
           </main>
           <Footer />
         </div>
