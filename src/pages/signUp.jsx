@@ -13,9 +13,11 @@ import {
 import { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import ErrorPage from "./Error/ErrorPage";
+import { useTranslation } from "react-i18next";
 // ----------------------------------------------------------
 
 const SignUp = () => {
+  const { t } = useTranslation(); // Translation 
   // useNavigate
   const navigate = useNavigate();
 
@@ -123,7 +125,7 @@ const SignUp = () => {
         <main>
           <form>
             <p style={{ color: "red", fontSize: "16px" }}> {Error}</p>
-            <p>Create New Account</p>
+            <p>{t("Create New Account")}</p>
             <input
               onChange={NameVal}
               required
@@ -142,10 +144,10 @@ const SignUp = () => {
               placeholder="Password:"
               type="password"
             />
-            <button onClick={sendData}>SignUp</button>
+            <button onClick={sendData}>{t("SignUp")}</button>
 
             <p className="account">
-              Ready have an account <Link to={"/signIn"}>Sign-In</Link>
+              {t("Ready have an account")} <Link to={"/signIn"}>{t("SignIn")}</Link>
             </p>
           </form>
         </main>

@@ -1,21 +1,35 @@
 import { Link } from "react-router-dom";
 import { useCollection } from "react-firebase-hooks/firestore";
-import { collection, orderBy, query } from "firebase/firestore";
+import { collection, orderBy, query, where } from "firebase/firestore";
 import { db } from "../../Firebase/Confog";
 import ErrorPage from "../Error/ErrorPage";
 import ReactLoading from "react-loading";
 import Moment from "react-moment";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const AllTasksSecton = ({ user }) => {
-  const [Order, setOrder] = useState(
-    query(collection(db, user.uid), orderBy("id" , "asc"))
+  const { t } = useTranslation(); //  Translate the page quickly if needed (mostly
+
+  const allTasks = query(collection(db, user.uid), orderBy("id")); // sort by id in ascending order
+
+  const [Order, setOrder] = useState(allTasks); //  Default Order is by id
+
+  const [Opasry, setOpasry] = useState(false); // for handling any errors that may occur during the fetch
+
+  const [value, loading, error] = useCollection(Order); // Loading and error handling.
+
+  const [selctValuo, setselctValuo] = useState("AllTasks"); // Default selection is all tasks.
+
+  const completed = query(
+    collection(db, user.uid),
+    where("completed", "==", true)
   );
 
-  const [Opasry, setOpasry] = useState(false);
-
-  const [value, loading, error] = useCollection(Order);
-
+  const NotCompleted = query(
+    collection(db, user.uid),
+    where("completed", "==", false)
+  );
   // error
   if (error) {
     return <ErrorPage />;
@@ -47,28 +61,56 @@ const AllTasksSecton = ({ user }) => {
     } else {
       return (
         <section className="all-tasks">
-
           {/* optons (filtered data) */}
           <section className="parent-of-btn">
+            {selctValuo === "AllTasks" && (
+              <>
+                <button
+                  style={{ opacity: Opasry ? "1" : "0.3" }}
+                  onClick={() => {
+                    setOrder(
+                      query(collection(db, user.uid), orderBy("id", "desc"))
+                    );
+                    setOpasry(true);
+                  }}
+                >
+                  {t("Newest First")}
+                </button>
 
-            <button 
-            style={{opacity:Opasry?  "1" : "0.3"}}
-            onClick={()=>{
-              setOrder(query(collection(db, user.uid), orderBy("id" , "desc")))
-              setOpasry(true)
-            }}>Newest First</button>
+                <button
+                  style={{ opacity: Opasry ? "0.3" : "1" }}
+                  onClick={() => {
+                    setOrder(
+                      query(collection(db, user.uid), orderBy("id", "asc"))
+                    );
+                    setOpasry(false);
+                  }}
+                >
+                  {t("Oldest First")}
+                </button>
+              </>
+            )}
 
-            <button 
-            style={{opacity:Opasry?  "0.3" : "1"}}
-            onClick={()=>{
-              setOrder(query(collection(db, user.uid), orderBy("id", "asc")))
-              setOpasry(false)
-            }}>Oldest First</button>
-
-            <select id="browsers">
-              <option value="">All Tasks</option>
-              <option value="">completed</option>
-              <option value="">Not Completed</option>
+            <select
+              value={selctValuo}
+              id="browsers"
+              onChange={(e) => {
+                if (e.target.value === "AllTasks") {
+                  setOrder(allTasks);
+                  setselctValuo("AllTasks");
+                  setOpasry(false);
+                } else if (e.target.value === "completed") {
+                  setOrder(completed);
+                  setselctValuo("completed");
+                } else if (e.target.value === "NotCompleted") {
+                  setOrder(NotCompleted);
+                  setselctValuo("NotCompleted");
+                }
+              }}
+            >
+              <option value="AllTasks"> {t("All Tasks")} </option>
+              <option value="completed">{t("completed")}</option>
+              <option value="NotCompleted">{t("Not Completed")}</option>
             </select>
           </section>
 

@@ -1,0 +1,26 @@
+{
+    "home": "Home Page",
+    "SignUp": "Sign-Up",
+    "SignIn": "Sign-In",
+    "About": "About",
+    "Profile": "Profile",
+    "language": "language",
+
+    "All Tasks": "All Tasks",
+    "completed": "completed",
+    "Not Completed": "Not Completed",
+    "Oldest First": "Oldest First",
+    "Newest First": "Newest First",
+    "Add Tew Task": "Add Tew Task",
+    "Wlcome": "Wlcome",
+    "please a message has been sent to the e-mail check the message": "please a message has been sent to the e-mail check the message",
+    "Send Massage again": "Send Massage again",
+    "Please":"Please",
+    "Continue...": "Continue...",
+    "Create New Account": "Create New Account",
+    "Ready have an account": "Ready have an account",
+    "Reset Password":  "Reset Password",
+    "plesse check your email": "plesse check your email",
+    "Don't have an account": "Don't have an account",
+    "forget password?": "forget password?"
+}

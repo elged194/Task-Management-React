@@ -14,6 +14,7 @@ import { useState } from "react";
 import { doc, setDoc } from "firebase/firestore";
 import ModelHome from "./model_of_home";
 import AllTasksSecton from "./all_tasks_secton";
+import { useTranslation } from "react-i18next";
 // -----------------------------------------------
 
 const Home = () => {
@@ -88,7 +89,8 @@ const Home = () => {
   const titleOfInput = (e) => settitleTask(e.target.value); // title Of Input
   const itemsOfInput = (e) => setInp(e.target.value); // items Of Input
 
-  
+  const { t} = useTranslation();
+
 
   // ========================================
   //  (-End-) fanction of model  / level-3 /
@@ -122,7 +124,7 @@ const Home = () => {
 
         <main>
           <p>
-            Please <Link to={"/signIn"}> Sign in</Link> Continue...
+            {t("Please")} <Link to={"/signIn"}> {t("SignIn")}</Link> {t("Continue...")}
           </p>
         </main>
 
@@ -145,11 +147,11 @@ const Home = () => {
 
           <main>
             <div>
-              Wlcome {user.displayName} <span>🧡</span>
+              {t("Wlcome")} {user.displayName} <span>🧡</span>
               <p>
-                please a message has been sent to the e-mail check the message
+                {t("please a message has been sent to the e-mail check the message")}
               </p>
-              <button onClick={SendMassage}>Send Massage again</button>
+              <button onClick={SendMassage}>{t("Send Massage again")}</button>
             </div>
           </main>
 
@@ -178,7 +180,7 @@ const Home = () => {
             {/* Add  new task  */}
             <section className="add-new-task">
               <button onClick={() => serResetPass(true)}>
-                Add Tew Task <i className="fa-solid fa-plus"></i>
+                {t("Add Tew Task")} <i className="fa-solid fa-plus"></i>
               </button>
             </section>
 

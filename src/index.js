@@ -7,6 +7,8 @@ import { HelmetProvider } from "react-helmet-async";
 // ---------------------------------------------------------------------
 import { DarkMode } from "./comp/darkMode";
 // ---------------------------------------------------------------------
+import './i18n';
+
 
 
 

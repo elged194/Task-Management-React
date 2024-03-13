@@ -145,3 +145,9 @@ section {
 .end-tasks .fa-circle-check{
     color: whitesmoke;
 }
+select{
+    font-weight: bold;
+}
+select option{
+    font-weight: bold;
+}

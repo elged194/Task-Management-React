@@ -14,19 +14,21 @@ import { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import ErrorPage from "../Error/ErrorPage";
 import Model from "../../comp/shaird/model";
+import { useTranslation } from "react-i18next";
 // -------------------------------------------------
 
 const SignIn = () => {
   // --------------------------------------------------------------
-  const navigate = useNavigate();
-  const [user, loading, error] = useAuthState(auth);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [Error, setError] = useState("");
-  const [showSendEmail, setShowSendEmail] = useState(false);
-
+  const navigate = useNavigate(); //  For routing
+  const [user, loading, error] = useAuthState(auth); //  User Auth State
+  const [email, setEmail] = useState(""); //  Email Input Field
+  const [password, setPassword] = useState(""); //  Password Input Field
+  const [Error, setError] = useState(""); //   Showing any type of errors if there is
+  const [showSendEmail, setShowSendEmail] = useState(false); //   To show the model or not
+  
   // ------------------ Level-3 ---------------------
-  const [resetPass, serResetPass] = useState(false);
+  const { t } = useTranslation(); // Translation    
+  const [resetPass, serResetPass] = useState(false); //   Reset Passord Mode On/Off
   const closeModel = () => {
     serResetPass(false);
   };
@@ -145,10 +147,10 @@ const SignIn = () => {
                 type="email"
               />
               <button onClick={handelFoget} className="reset-password">
-                Reset Password
+                {t("Reset Password")}
               </button>
               {showSendEmail && (
-                <p className="massege">plesse check your email</p>
+                <p className="massege">{t("plesse check your email")}</p>
               )}
             </Model>
           )}
@@ -169,14 +171,14 @@ const SignIn = () => {
               placeholder="Password:"
               type="password"
             />
-            <button onClick={sendData}>SignIn</button>
+            <button onClick={sendData}>{t("SignIn")}</button>
 
             <p className="account">
-              Don't have an account <Link to={"/signUp"}>Sign-Up</Link>
+              {t("Don't have an account")} <Link to={"/signUp"}>{t("SignUp")}</Link>
             </p>
 
             <p onClick={() => serResetPass(true)} className="click-forget">
-              forget password?
+              {t("forget password?")}
             </p>
           </form>
         </main>
