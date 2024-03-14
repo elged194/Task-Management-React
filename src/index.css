@@ -365,3 +365,9 @@ header {
     transform: rotate(360deg);
   }
 }
+
+.singUp-loding{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

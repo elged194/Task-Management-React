@@ -14,12 +14,15 @@ import { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import ErrorPage from "./Error/ErrorPage";
 import { useTranslation } from "react-i18next";
+import ReactLoading from "react-loading";
 // ----------------------------------------------------------
 
 const SignUp = () => {
-  const { t } = useTranslation(); // Translation 
-  // useNavigate
-  const navigate = useNavigate();
+  const { t } = useTranslation(); // Translation
+
+  const [showLoding, setshowLoding] = useState(); //  Loading...
+
+  const navigate = useNavigate(); // useNavigate
 
   const [user, loading, error] = useAuthState(auth);
 
@@ -42,12 +45,13 @@ const SignUp = () => {
   const passwordVal = (e) => setPassword(e.target.value);
 
   // create User With Email And Password
-  const sendData = (e) => {
-    // ايقاف الريفرش او الارسال
-    e.preventDefault();
+  const sendData = async(e) => {
+    e.preventDefault(); // ايقاف الريفرش او الارسال
+
+    setshowLoding(true); //  show Loading...
 
     //  التحقق من البيانات
-    createUserWithEmailAndPassword(auth, email, password)
+    await createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed up
         const user = userCredential.user;
@@ -89,6 +93,10 @@ const SignUp = () => {
             setError("Email is incorrect");
             break;
 
+          case "auth/operation-not-allowed":
+            setError("You cannot create an account at this time");
+            break;
+
           default:
             setError(
               "Please make sure that your email and password are correct"
@@ -96,13 +104,14 @@ const SignUp = () => {
             break;
         }
       });
+    setshowLoding(false); //  show Loading...
   };
 
   // error
   if (error) {
     return (
       <div>
-        <ErrorPage/>
+        <ErrorPage />
       </div>
     );
   }
@@ -144,10 +153,23 @@ const SignUp = () => {
               placeholder="Password:"
               type="password"
             />
-            <button onClick={sendData}>{t("SignUp")}</button>
+            <button onClick={sendData} className="singUp-loding">
+              {showLoding ? (
+                <ReactLoading
+                  type={"bars"}
+                  color={"#fff"}
+                  height={50}
+                  width={50}
+                  display={"flex"}
+                />
+              ) : (
+                t("SignUp")
+              )}
+            </button>
 
             <p className="account">
-              {t("Ready have an account")} <Link to={"/signIn"}>{t("SignIn")}</Link>
+              {t("Ready have an account")}{" "}
+              <Link to={"/signIn"}>{t("SignIn")}</Link>
             </p>
           </form>
         </main>

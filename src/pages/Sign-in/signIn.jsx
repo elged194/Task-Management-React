@@ -3,7 +3,7 @@ import Footer from "../../comp/Footer";
 import { Helmet } from "react-helmet-async";
 import { Link, useNavigate } from "react-router-dom";
 import Lodinge from "../../comp/Lodinge";
-import "./signin.css"
+import "./signin.css";
 // -------------------------------------------------
 import { auth } from "../../Firebase/Confog";
 import {
@@ -15,6 +15,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import ErrorPage from "../Error/ErrorPage";
 import Model from "../../comp/shaird/model";
 import { useTranslation } from "react-i18next";
+import ReactLoading from "react-loading";
 // -------------------------------------------------
 
 const SignIn = () => {
@@ -25,10 +26,12 @@ const SignIn = () => {
   const [password, setPassword] = useState(""); //  Password Input Field
   const [Error, setError] = useState(""); //   Showing any type of errors if there is
   const [showSendEmail, setShowSendEmail] = useState(false); //   To show the model or not
-  
+
   // ------------------ Level-3 ---------------------
-  const { t } = useTranslation(); // Translation    
+  const { t } = useTranslation(); // Translation
+  const [showLoding, setshowLoding] = useState(); //  Loading...
   const [resetPass, serResetPass] = useState(false); //   Reset Passord Mode On/Off
+
   const closeModel = () => {
     serResetPass(false);
   };
@@ -63,12 +66,13 @@ const SignIn = () => {
   // --------------------------------------------------------------
 
   // sign-In With Email And Password
-  const sendData = (e) => {
-    // هيوقف عمليه الرفرش لصفحه
-    e.preventDefault();
+  const sendData = async (e) => {
+    e.preventDefault(); // هيوقف عمليه الرفرش لصفحه
+
+    setshowLoding(true); //  show Loading...
 
     // sign-In With Email And Password
-    signInWithEmailAndPassword(auth, email, password)
+    await signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
         // const user = userCredential.user;
@@ -92,6 +96,10 @@ const SignIn = () => {
             setError("Email is incorrect");
             break;
 
+          case "auth/operation-not-allowed":
+            setError("You cannot create an account at this time");
+            break;
+
           default:
             setError(
               "Please make sure that your email and password are correct"
@@ -99,6 +107,8 @@ const SignIn = () => {
             break;
         }
       });
+
+    setshowLoding(false); //  show Loading...
   };
 
   // --------------------------------------------------------------
@@ -171,10 +181,23 @@ const SignIn = () => {
               placeholder="Password:"
               type="password"
             />
-            <button onClick={sendData}>{t("SignIn")}</button>
+            <button onClick={sendData} className="singUp-loding">
+              {showLoding ? (
+                <ReactLoading
+                  type={"bars"}
+                  color={"#fff"}
+                  height={50}
+                  width={50}
+                  display={"flex"}
+                />
+              ) : (
+                t("SignIn")
+              )}
+            </button>
 
             <p className="account">
-              {t("Don't have an account")} <Link to={"/signUp"}>{t("SignUp")}</Link>
+              {t("Don't have an account")}{" "}
+              <Link to={"/signUp"}>{t("SignUp")}</Link>
             </p>
 
             <p onClick={() => serResetPass(true)} className="click-forget">
