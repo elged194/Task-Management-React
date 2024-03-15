@@ -25,12 +25,18 @@ h2 {
 
 .hide-when-mobile {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 10px;
 }
 
-.main-list.lang{
-cursor: pointer;
+.main-list.lang {
+  cursor: pointer;
+  color: #999;
+}
+
+.main-list.lang:hover {
+  color: #fff;
 }
 
 .main-list {
@@ -41,52 +47,56 @@ cursor: pointer;
 
 .main-list .lang-down {
   position: absolute;
-  background-color: #333;
+  background-color: #31353f;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
   padding: 5px;
-  width: 125px;
-  top: 50px;
-  left: -5px;
+  width: 65px;
+  top: 70px;
+  left: 8px;
   border-top: 1px solid whitesmoke;
   display: none;
   transition: all 0.5s;
 }
 
-.main-list .lang-down li{
+.main-list .lang-down li {
   margin: 3px 0;
   transition: all 0.5s;
   cursor: pointer;
   text-align: start;
   font-weight: bold;
   display: flex;
-    justify-content: space-between;
-    align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.lang-down .fa-check{
+
+.lang-down .fa-check {
   margin: 0 3px;
 }
 
-li.lang:hover ul.lang-down{
+li.lang:hover ul.lang-down {
   display: block;
 }
 
-.main-list .lang-down li:hover{
+.main-list .lang-down li:hover {
   background-color: #777;
   color: #333;
-  padding: 5px;
+  padding: 0 2px;
+}
+
+header .fa-circle-check:hover {
+  color: #333 !important;
 }
 
 .main-link {
   padding: 8px 15px;
 }
 
-.main-link:hover,
-.main-link.active {
-  color: #fff;
-  box-shadow: 0 0 5px #fff;
-  border-radius: 5px;
-}
 
+.title {
+  color: #fff;
+}
 
 * {
   margin: 0;
@@ -94,7 +104,7 @@ li.lang:hover ul.lang-down{
   font-family: sans-serif;
   text-decoration: none;
   list-style: none;
-  /* letter-spacing: 1px; */
+
 }
 
 html {
@@ -114,7 +124,7 @@ h1 {
 }
 
 a {
-  color: #fff;
+  color: #999;
 }
 
 
@@ -148,10 +158,68 @@ footer {
 }
 
 /* ==================
-    3. header of mobile
+    3. header 
 ===================== */
 .show-when-mobile {
+  /* header of mobile */
   display: none;
+}
+
+header .fa-solid {
+  background-color: #313847;
+  padding: 13px;
+  border-radius: 50px;
+  color: #888;
+}
+
+header .fa-solid:hover {
+  color: #fff;
+}
+
+.active {
+  padding-bottom: 18px;
+  border-bottom: solid 1px #fff;
+}
+
+header .toast {
+  padding: 5px 10px;
+  position: absolute;
+  top: 80px;
+  left: 28px;
+  font-size: 13px;
+  background-color: #313847;
+  border-radius: 10px;
+  font-weight: 500;
+  display: none;
+}
+
+header .mode .toast {
+  left: 14px;
+}
+
+header .SignIn .toast,
+header .SignUp .toast{
+  left: 13px;
+}
+
+header .signOut .toast {
+  left: 9px;
+  top: 82px;
+}
+
+header .home:hover .toast,
+header .Profile:hover .toast,
+header .Profile:hover .toast,
+header .mode:hover .toast,
+header .signOut:hover .toast,
+header .SignIn:hover .toast,
+header .SignUp:hover .toast,
+header .about:hover .toast {
+  display: block;
+}
+
+header .fa-circle-check {
+  color: #999;
 }
 
 /* ==================
@@ -179,44 +247,32 @@ main button:hover {
   color: #fff !important;
 }
 
-.App.Light {
-  background-color: aliceblue;
-  color: #282c34 !important;
-}
 
-.App.Light main {
-  color: #282c34;
-}
-
-.App.Light header,
-.App.Light footer {
-  background-color: #777;
-  color: #fff;
-}
-
-.App.Light .fa-sun {
-  display: none;
-}
-
-.App.Dark {
+.Dark {
   background-color: #282c34;
   color: aliceblue;
 }
 
-.App.Dark main {
+.Dark main {
   color: aliceblue;
 }
 
-.App.Dark .fa-moon {
+.Dark .fa-moon {
   display: none;
 }
 
 .fa-sun {
   font-size: 20px;
-  color: goldenrod;
+  color: #a37a12;
   text-shadow: 0px 0px 15px goldenrod;
   cursor: pointer;
+  background-color: #313847;
+  padding: 10px;
+  border-radius: 50px;
+}
 
+.fa-sun:hover {
+  color: goldenrod;
 }
 
 .fa-moon {
@@ -226,35 +282,11 @@ main button:hover {
   cursor: pointer;
 }
 
-.App.Dark main p {
+.Dark main p {
   color: #fff;
 }
 
-.App.Light main time {
-  color: #1b1b1b;
-}
 
-.App.Dark button {
-  color: #fff;
-}
-
-.App.Light button {
-  color: #1b1b1b;
-  border: 1px solid #777;
-}
-
-.App.Light form p,
-.App.Light form h1 {
-  color: #1b1b1b;
-}
-
-.App.Light main p {
-  color: #1b1b1b;
-}
-
-.App.Light form button:active {
-  color: #1b1b1b;
-}
 
 /* =======================================
    Level-2 {SignUp - SignIn}
@@ -301,6 +333,7 @@ main a {
   text-decoration: underline;
   color: #777;
 }
+
 
 
 
@@ -366,8 +399,86 @@ header {
   }
 }
 
-.singUp-loding{
+.singUp-loding {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+.fa-check {
+  color: #999;
+  background-color: transparent;
+}
+
+/* ==================
+     Light Mode 
+   ================== */
+   .Light {
+    background-color: #d3c8ad;
+    color: #282c34 !important;
+  }
+  
+  .Light main {
+    color: #282c34;
+  }
+  
+  .Light header,
+  .Light footer {
+    background-color: #7f7866;
+    color: #fff;
+  }
+  
+  .Light .fa-sun {
+    display: none;
+  }
+  .Light main time {
+    color: #1b1b1b;
+  }
+  
+  .Dark button {
+    color: #fff;
+  }
+  
+  .Light button {
+    color: #1b1b1b;
+    border: 1px solid #777;
+  }
+  
+  .Light form p,
+  .Light form h1 {
+    color: #1b1b1b;
+  }
+  
+  .Light main p {
+    color: #1b1b1b;
+  }
+  
+  .Light form button:active {
+    color: #1b1b1b;
+  }
+  .Light header .fa-solid{
+    background-color: #999999;
+    color: #c7c7c7;
+  }
+  .Light header .fa-solid:hover{
+    color: #fff;
+  }
+  .Light .fa-moon{
+    padding: 11px 14px;
+  }
+  .parent-of-btn button{
+    margin: 5px 10px;
+  }
+  .Light header .toast{
+    background-color: #999999;
+  }
+  .Light .main-list .lang-down{
+    background-color: #7f7866;
+  }
+  .Light .main-list .lang-down li:hover{
+    color: #fff;
+  }
+  .fa-square-github{
+    font-size: 25px;
+    margin: 0px 10px;
+  }

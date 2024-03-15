@@ -30,8 +30,17 @@ section {
     padding: 5px 10px;
     border-radius: 5px;
     border: none;
+    background-color: #999;
+    cursor: pointer;
+}
+option{
+    cursor: pointer;
+
 }
 
+.parent-of-btn select:hover{
+    background-color: whitesmoke;
+}
 .App.Light .home .parent-of-btn select {
     background-color: #777;
     color: #fff;
@@ -81,9 +90,11 @@ section {
     text-align: start;
 }
 .App.Dark .all-tasks a{
+    color: #999;
+}
+.home .all-tasks .one-task:hover a{
     color: #fff;
 }
-
 /* ==============================
    3- Add  new task 
 =================================*/

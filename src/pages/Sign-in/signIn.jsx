@@ -100,12 +100,17 @@ const SignIn = () => {
             setError("You cannot create an account at this time");
             break;
 
+            case "auth/network-request-failed":
+            setError("Please check your internet connection");
+            break;
+            
           default:
             setError(
               "Please make sure that your email and password are correct"
             );
             break;
         }
+        console.log(errorCode)
       });
 
     setshowLoding(false); //  show Loading...

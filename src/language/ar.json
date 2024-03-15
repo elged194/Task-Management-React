@@ -1,8 +1,8 @@
 {
-    "home": "الصفحه الرئيسيه",
+    "home": "الصفحه_الرئيسيه",
     "SignUp": "انشاء حساب",
     "SignIn": "تسجيل الدخول",
-    "About": "حول الموقع",
+    "About": "حول_الموقع",
     "Profile": "حسابك",
     "language": "اللغه",
 
@@ -23,6 +23,12 @@
     "plesse check your email": "يرجى التحقق من البريد الإلكتروني الخاص بك",
     "Don't have an account": "ليس لديك حساب",
     "forget password?": "نسيت كلمة المرور؟",
-    "Task Add successfully": "تمت إضافة المهمة بنجاح"
+    "Task Add successfully": "تمت إضافة المهمة بنجاح",
+    "English":"EN",
+    "عربي":"ع",
+    "French":"FR",
+    "signOut":"تسجيل_خروج"
+    
+
 
 }

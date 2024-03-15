@@ -1,5 +1,5 @@
 {
-    "home": "Home Page",
+    "home": "Home",
     "SignUp": "Sign-Up",
     "SignIn": "Sign-In",
     "About": "About",
@@ -22,5 +22,10 @@
     "Reset Password":  "Reset Password",
     "plesse check your email": "plesse check your email",
     "Don't have an account": "Don't have an account",
-    "forget password?": "forget password?"
+    "forget password?": "forget password?",
+    "English":"EN",
+    "عربي":"AR",
+    "French":"FR",
+    "signOut":"SignOut"
+
 }

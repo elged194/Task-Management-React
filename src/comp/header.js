@@ -33,40 +33,49 @@ const Header = () => {
       <header className="hide-when-mobile">
         {/* logo */}
         <Link to="/">
-          <h1>Hussein Elged</h1>
+          <h1 className="title">Hussein Elged</h1>
         </Link>
 
-        {/* Mode */}
-        {/* <i className="fa-regular fa-snowflake"></i> */}
-        <i
-          onClick={() => ChangMode(mode === "Light" ? "Dark" : "Light")}
-          className="fa-solid fa-moon"
-        ></i>
-        <i
-          onClick={() => ChangMode(mode === "Light" ? "Dark" : "Light")}
-          className="fa-regular fa-sun"
-        ></i>
-
         <ul className="flex">
-          {/* Sign-Out */}
+          {/* home */}
           {user && (
-            <li onClick={handelSignOut} className="main-list ">
-              <NavLink className="main-link" to="/signIn">
-                <i className="fa-solid fa-right-from-bracket"></i>
-              </NavLink>
-            </li>
-          )}
-
-          {user && (
-            <li className="main-list">
+            <li className="main-list home">
               <NavLink className="main-link" to="/">
-                {t("home")}
+                {/* {t("home")} */}
+                <i class="fa-solid fa-house"></i>
               </NavLink>
+              <p className="toast"> {t("home")} </p>
             </li>
           )}
 
-          <li className="main-list lang">
-            <p>{t("language")}</p>
+          {/* About */}
+          {user && (
+            <li className="main-list about">
+              <NavLink className="main-link" to="/About">
+                {/* {t("About")} */}
+                <i class="fa-solid fa-address-card"></i>
+              </NavLink>
+              <p className="toast"> {t("About")} </p>
+            </li>
+          )}
+
+          {/* Profile */}
+          {user && (
+            <li className="main-list Profile">
+              <NavLink className="main-link" to="/Profile">
+                {/* {t("Profile")} */}
+                <i class="fa-solid fa-gears"></i>
+              </NavLink>
+              <p className="toast"> {t("Profile")} </p>
+            </li>
+          )}
+
+          {/* language */}
+          <li className="main-list lang ">
+            <p>
+              {/* {t("language")} */}
+              <i class="fa-solid fa-globe"></i>
+            </p>
             <ul className="lang-down">
               <li
                 dir="rtl"
@@ -74,7 +83,10 @@ const Header = () => {
                   i18n.changeLanguage("ar");
                 }}
               >
-                عربي {i18n.language === "ar" && <i class="fa-solid fa-check"></i>}{" "}
+                {t("عربي")}
+                {i18n.language === "ar" && (
+                  <i class="fa-regular fa-circle-check"></i>
+                )}{" "}
               </li>
 
               <li
@@ -82,49 +94,65 @@ const Header = () => {
                   i18n.changeLanguage("en");
                 }}
               >
-                English {i18n.language === "en" && <i class="fa-solid fa-check "></i>}{" "}
+                {t("English")}
+                {i18n.language === "en" && (
+                  <i class="fa-regular fa-circle-check"></i>
+                )}{" "}
               </li>
               <li
                 onClick={() => {
                   i18n.changeLanguage("fr");
                 }}
               >
-                French {i18n.language === "fr" && <i class="fa-solid fa-check"></i>}{" "}
+                {t("French")}
+                {i18n.language === "fr" && (
+                  <i className="fa-solid fa-check"></i>
+                )}{" "}
               </li>
             </ul>
           </li>
 
-          {/* SignUp */}
-          {!user && (
-            <li className="main-list">
-              <NavLink className="main-link" to="/signUp">
-                {t("SignUp")}
-              </NavLink>
-            </li>
-          )}
+          {/* Mode */}
+          <li className="main-list mode">
+            <i
+              onClick={() => ChangMode(mode === "Light" ? "Dark" : "Light")}
+              className="fa-solid fa-moon"
+            ></i>
+            <i
+              onClick={() => ChangMode(mode === "Light" ? "Dark" : "Light")}
+              className="fa-regular fa-sun"
+            ></i>
+            <p className="toast"> Mode </p>
+          </li>
 
           {/* SignIn */}
           {!user && (
-            <li className="main-list">
-              <NavLink className="main-link" to="/signIn">
-                {t("SignIn")}
+            <li className="main-list SignIn">
+              <NavLink to="/signIn">
+                <i class="fa-solid fa-right-from-bracket"></i>
               </NavLink>
+              <p className="toast"> SignIn </p>
             </li>
           )}
 
-          {user && (
-            <li className="main-list">
-              <NavLink className="main-link" to="/About">
-                {t("About")}
+          {/* SignUp */}
+          {!user && (
+            <li className="main-list SignUp">
+              <NavLink to="/signUp">
+                {/* {t("SignUp")} */}
+                <i class="fa-solid fa-user-plus"></i>
               </NavLink>
+              <p className="toast"> SignUp </p>
             </li>
           )}
 
+          {/* Sign-Out */}
           {user && (
-            <li className="main-list">
-              <NavLink className="main-link" to="/Profile">
-                {t("Profile")}
+            <li onClick={handelSignOut} className="main-list signOut ">
+              <NavLink to="/signIn">
+                <i className="fa-solid fa-right-from-bracket"></i>
               </NavLink>
+              <p className="toast"> {t("signOut")} </p>
             </li>
           )}
         </ul>

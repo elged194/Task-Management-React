@@ -7,7 +7,7 @@ const Footer = () => {
     return (
       <footer dir="rtl">
         تم التصميم والبرمجه بواسطه حسين الجد elged194@gmail.com
-        <span>🧡</span>
+        <span><i class="fa-brands fa-square-github"></i></span>
       </footer>
     );
   }
@@ -15,8 +15,8 @@ const Footer = () => {
   if (i18n.language === "en") {
     return (
       <footer >
-        Designed and developed by elged194@gmail.com
-        <span>🧡</span>
+        designed and developed by elged194@gmail.com
+        <span><i class="fa-brands fa-square-github"></i></span>
       </footer>
     );
   }
@@ -25,7 +25,7 @@ const Footer = () => {
     return (
       <footer >
         Concu et developpo par elged194@gmail.com
-        <span>🧡</span>
+        <span><i class="fa-brands fa-square-github"></i></span>
       </footer>
     );
   }

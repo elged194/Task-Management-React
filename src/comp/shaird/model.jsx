@@ -79,10 +79,9 @@ const Model = ({ closeModel, children }) => {
         }
         `}</style>
       </Helmet>
-
       <form className="model">
         <div>
-          <i onClick={() => closeModel()} className="fa-solid fa-xmark"></i>
+          <i onClick={ closeModel} className="fa-solid fa-xmark"></i>
         </div>
 
         {children}
