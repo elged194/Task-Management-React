@@ -156,9 +156,10 @@ footer {
   font-size: 18px;
   box-shadow: 0 5px 30px 0 rgba(0, 0, 0, .25);
 }
-footer .fa-brands{
+
+footer .fa-brands {
   font-size: 25px;
-  padding: 0  10px;
+  padding: 0 10px;
   color: #fff;
 }
 
@@ -203,7 +204,7 @@ header .mode .toast {
 }
 
 header .SignIn .toast,
-header .SignUp .toast{
+header .SignUp .toast {
   left: 13px;
 }
 
@@ -418,124 +419,146 @@ header {
 /* ==================
      Light Mode 
    ================== */
-   .Light {
-    background-color: #d3c8ad;
-    color: #282c34 !important;
-  }
-  
-  .Light header{
-    box-shadow: 0 5px 30px 0 #8d8572;
-  }
-  .Light footer{
-    box-shadow: 0 5px 37px 0 #8d8572
-  }
-  .Light main {
-    color: #282c34;
-  }
-  
-  .Light header,
-  .Light footer {
-    /* background-color: #7f7866; */
-    background-color: #8d8572;
-    color: #fff;
-  }
-  
-  .Light .fa-sun {
-    display: none;
-  }
-  .Light main time {
-    color: #1b1b1b;
-  }
-  
-  .Dark button {
-    color: #fff;
-  }
-  
-  .Light button {
-    color: #1b1b1b;
-    border: 1px solid #777;
-  }
-  
-  .Light form p,
-  .Light form h1 {
-    color: #1b1b1b;
-  }
-  
-  .Light main p {
-    color: #1b1b1b;
-  }
-  
-  .Light form button:active {
-    color: #1b1b1b;
-  }
-  .Light header .fa-solid{
-    background-color: #999999;
-    color: #c7c7c7;
-  }
-  .Light header .fa-solid:hover{
-    color: #fff;
-  }
-  .Light .fa-moon{
-    padding: 11px 14px;
-  }
-  .parent-of-btn button{
-    margin: 5px 10px;
-  }
-  .Light header .toast{
-    background-color: #999999;
-  }
-  .Light .main-list .lang-down{
-    background-color: #7f7866;
-  }
-  .Light .main-list .lang-down li:hover{
-    color: #fff;
-  }
-  footer .fa-heart{
-    font-size: 25px;
-    margin: 0px 10px;
-  }
-  .Light .parent-of-btn select{
-    color: #fff;
-  }
-  .Light .parent-of-btn select:hover{
-    background-color: #999;
-  }
-  footer hr{
-    width: 200px;
-    margin: 6px auto;
-  }
-
-  .Light .home .all-tasks .one-task{
-    background-color: #aba28d;
-    border: none;
-  }
-  .Light .title-edit-task input{
-    color: #7f7866;
-  }
-  .Light .sub-task .sub-items{
-    background-color: #7f7866;
-    color: #fff;
-  }
-  .Light .edit-task .title-edit-task .fa-pen-to-square{
-    color: #7f7866;
-  }
-  .Light .sub-task .menuo-sub-task{
-    color: #7f7866;
-  }
-  .sub-task #checkbox{
-    margin: 5px;
-  }
-  .Light .add-new-task-items{
-    background-color: #7f7866;
-  }
-  .Light .add {
-    background-color: #aba28d;
-    color: #fff;
+.Light {
+  background-color: #d3c8ad;
+  color: #282c34 !important;
 }
-.Light .Cancel{
+
+.Light header {
+  box-shadow: 0 5px 30px 0 #8d8572;
+}
+
+.Light footer {
+  box-shadow: 0 5px 37px 0 #8d8572
+}
+
+.Light main {
+  color: #282c34;
+}
+
+.Light header,
+.Light footer {
+  /* background-color: #7f7866; */
+  background-color: #8d8572;
   color: #fff;
 }
-.Light .submit-task-butn , .Light .add-btn-of-items , .Light .submit-task-butn:hover {
+
+.Light .fa-sun {
+  display: none;
+}
+
+.Light main time {
+  color: #1b1b1b;
+}
+
+.Dark button {
+  color: #fff;
+}
+
+.Light button {
+  color: #1b1b1b;
+  border: 1px solid #777;
+}
+
+.Light form p,
+.Light form h1 {
+  color: #1b1b1b;
+}
+
+.Light main p {
+  color: #1b1b1b;
+}
+
+.Light form button:active {
+  color: #1b1b1b;
+}
+
+.Light header .fa-solid {
+  background-color: #999999;
+  color: #c7c7c7;
+}
+
+.Light header .fa-solid:hover {
+  color: #fff;
+}
+
+.Light .fa-moon {
+  padding: 11px 14px;
+}
+
+.parent-of-btn button {
+  margin: 5px 10px;
+}
+
+.Light header .toast {
+  background-color: #999999;
+}
+
+.Light .main-list .lang-down {
+  background-color: #7f7866;
+}
+
+.Light .main-list .lang-down li:hover {
+  color: #fff;
+}
+
+footer .fa-heart {
+  font-size: 25px;
+  margin: 0px 10px;
+}
+
+.Light .parent-of-btn select {
+  color: #fff;
+}
+
+.Light .parent-of-btn select:hover {
+  background-color: #999;
+}
+
+footer hr {
+  width: 200px;
+  margin: 6px auto;
+}
+
+.Light .home .all-tasks .one-task {
+  background-color: #aba28d;
+  border: none;
+}
+
+.Light .title-edit-task input {
+  color: #7f7866;
+}
+
+
+.Light .edit-task .title-edit-task .fa-pen-to-square,
+.Light .click-forget {
+  color: #7f7866;
+}
+
+.Light .sub-task .menuo-sub-task {
+  color: #7f7866;
+}
+
+.sub-task #checkbox {
+  margin: 5px;
+}
+
+.Light .add-new-task-items {
+  background-color: #7f7866;
+}
+
+
+.Light .Cancel {
+  color: #fff;
+}
+
+.Light .submit-task-butn,
+.Light .add,
+.Light .sub-task .sub-items,
+.Light .add-btn-of-items,
+.Light .singUp-loding,
+.Light .singUp-loding:hover,
+.Light .submit-task-butn:hover {
   background-color: #7f7866;
   color: #fff;
 
