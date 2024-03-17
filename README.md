@@ -17,7 +17,6 @@
     <a href="https://firebase.google.com/">Firebase</a>
     <a href="https://fontawesome.com">Fontawesome</a>
     <a href="https://getbootstrap.com/">Bootstrap</a>
-    
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
     <br />
