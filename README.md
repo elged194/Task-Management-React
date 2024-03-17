@@ -1,26 +1,3 @@
-<!-- # About Task Management WEB
-
-<a href="https://github.com/elged194/React_Level2-main/tree/main">View Demo</a>
-
-
-* [![React][React.js]][React-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![Firebase][firebase.google.com/]][firebase-url]
-
-## Getting Started
-
-<img src="./img/Screenshot_17-4.jpeg">
-<img src="./img/Screenshot_17-5.jpeg">
-<img src="./img/Screenshot_17-6.jpeg">
-<img src="./img/Screenshot_17-1.jpeg">
-<img src="./img/Screenshot_17-8.jpeg">
-<img src="./img/Screenshot_17-7.jpeg">
-<img src="./img/Screenshot_17-2.jpeg">
-<img src="./img/Screenshot_17-9.jpeg">
-<img src="./img/Screenshot_17-10.jpeg">
-<img src="./img/Screenshot_17-11.jpeg">
-<img src="./img/Screenshot_17-3.jpeg"> -->
-
 <a name="readme-top"></a>
 
 <!-- PROJECT LOGO -->
@@ -30,19 +7,21 @@
     <img src="img//logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Task Management</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    his website provides powerful tools for managing daily and monthly tasks, helping users achieve efficiency and organization in their daily and professional lives
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
+    <h5> Tolse </h5>
+    <a href="https://react.dev/">React.js</a>
+    <a href="https://firebase.google.com/">Firebase</a>
+    <a href="https://fontawesome.com">Fontawesome</a>
+    <a href="https://getbootstrap.com/">Bootstrap</a>
+    
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <br />
+
   </p>
 </div>
 
@@ -80,7 +59,6 @@ Here are some key features of this website:
 
 In summary, this website provides powerful tools for managing daily and monthly tasks, helping users achieve efficiency and organization in their daily and professional lives.
 
-
 موقع الويب الذي يدير المهام اليومية والشهرية ويسمح بحفظ البيانات وتعديلها هو نوع من تطبيقات إدارة المهام الشخصية التي تهدف إلى مساعدة الأفراد في تنظيم أنشطتهم اليومية والشهرية بطريقة فعالة. يوفر هذا الموقع العديد من الميزات والوظائف التي تساعد المستخدمين على تحقيق أهدافهم وإدارة وقتهم بشكل أفضل.
 
 ليك بعض السمات والميزات الرئيسية لهذا الموقع:
@@ -101,15 +79,17 @@ In summary, this website provides powerful tools for managing daily and monthly 
 
 <!-- -------------------------------------------- -->
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Built With
+### Libraries
 
-
-- [![React][React.js]][React-url]
-- [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-- [![fontawesome][fontawesome.com/]][fontawesome-url]
+- firebase
+- react-firebase-hook
+- react-helmet-async
+- react-i18next
+- react-loading
+- react-moment
+- react-router-dom
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -122,12 +102,14 @@ To launch the project, follow these steps.
 ### Prerequisites
 
 Make sure you have Node.js installed on your computer to verify. Run .
+
 - npm
+
 ```sh
 node -v
 ```
-Downloads [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
 
+Downloads [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
 
 ### Installation
 
@@ -139,7 +121,7 @@ Downloads [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
    ```sh
    npm start
    ```
-<!-- USAGE EXAMPLES -->
+   <!-- USAGE EXAMPLES -->
 
 ## Usage
 
@@ -147,11 +129,12 @@ Downloads [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
 2. A confirmation message will be sent.
 3. Log in.
 
-
 ## Contact
 
-Your Name - [elged194@gmail.com](https://www.linkedin.com/in/hussein-sadiq-elged/) - elged194@gmail.com
-linkedin - [https://www.linkedin.com/in/hussein-sadiq-elged/](https://www.linkedin.com/in/hussein-sadiq-elged/) 
+Your Name - [elged194@gmail.com](https://gmail.com) - elged194@gmail.com
+<br />
+linkedin - [https://www.linkedin.com/in/hussein-sadiq-elged/](https://www.linkedin.com/in/hussein-sadiq-elged/)
+<br />
 Project Link: [https://github.com/elged194/React_Level2-main](https://github.com/elged194/React_Level2-main)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
