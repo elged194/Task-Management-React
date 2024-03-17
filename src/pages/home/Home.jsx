@@ -124,9 +124,9 @@ const Home = () => {
         <Header />
 
         <main>
-          <p>
+          <h2>
             {t("Please")} <Link to={"/signIn"}> {t("SignIn")}</Link> {t("Continue...")}
-          </p>
+          </h2>
         </main>
 
         <Footer />
@@ -149,9 +149,9 @@ const Home = () => {
           <main>
             <div>
               {t("Wlcome")} {user.displayName} <span>🧡</span>
-              <p>
+              <h2>
                 {t("please a message has been sent to the e-mail check the message")}
-              </p>
+              </h2>
               <button onClick={SendMassage}>{t("Send Massage again")}</button>
             </div>
           </main>

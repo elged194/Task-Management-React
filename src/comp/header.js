@@ -33,7 +33,7 @@ const Header = () => {
       <header className="hide-when-mobile">
         {/* logo */}
         <Link to="/">
-          <h1 className="title">Hussein Elged</h1>
+          <h1 className="title">Task Management</h1>
         </Link>
 
         <ul className="flex">

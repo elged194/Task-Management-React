@@ -563,3 +563,6 @@ footer hr {
   color: #fff;
 
 }
+.Light form input{
+  border: none;
+}

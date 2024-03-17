@@ -1,8 +1,14 @@
-# Getting Started with Create React App
+# Task Management WEB
 
 
-<img src="./src/img/Screenshot_1-3-2024_143946_localhost.jpeg">
-<img src="./src/img/Screenshot_1-3-2024_144013_localhost.jpeg">
-<img src="./src/img/Screenshot_1-3-2024_144025_localhost.jpeg">
-<img src="./src/img/Screenshot_1-3-2024_144429_localhost.jpeg">
-<img src="./src/img/Screenshot_1-3-2024_14448_localhost.jpeg">
+<img src="./img/Screenshot_17-1.jpeg">
+<img src="./img/Screenshot_17-2.jpeg">
+<img src="./img/Screenshot_17-3.jpeg">
+<img src="./img/Screenshot_17-4.jpeg">
+<img src="./img/Screenshot_17-5.jpeg">
+<img src="./img/Screenshot_17-6.jpeg">
+<img src="./img/Screenshot_17-7.jpeg">
+<img src="./img/Screenshot_17-8.jpeg">
+<img src="./img/Screenshot_17-9.jpeg">
+<img src="./img/Screenshot_17-10.jpeg">
+<img src="./img/Screenshot_17-11.jpeg">
