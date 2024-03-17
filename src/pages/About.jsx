@@ -55,7 +55,7 @@ const About = () => {
           </Helmet>
 
           <Header />
-          <main>About Page</main>
+          <main><h1>About Page</h1></main>
           <Footer />
         </div>
       );

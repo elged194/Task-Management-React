@@ -72,14 +72,14 @@ const Profile = () => {
           <Header />
           <main>
             <div style={{ textAlign: "start" }}>
-              <p>Name: {user.displayName}</p>
-              <p>E-mail: {user.email}</p>
-              <p>
+              <h3>Name: {user.displayName}</h3>
+              <h3>E-mail: {user.email}</h3>
+              <h3>
                 Create Accont:{" "}
                 <Moment fromNow ago date={user.metadata.creationTime} />
-              </p>
+              </h3>
 
-              <p>
+              <h3>
                 last SignIn Time:{" "}
                 <Moment
                   fromNow
@@ -87,9 +87,9 @@ const Profile = () => {
                   ago
                   date={user.metadata.lastSignInTime}
                 />
-              </p>
+              </h3>
 
-              <button onClick={DeleteAccont}>Delete Accont</button>
+              <button onClick={DeleteAccont} style={{marginLeft:"0"}}>Delete Accont</button>
             </div>
           </main>
 

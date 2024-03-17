@@ -121,6 +121,7 @@ html {
 h1 {
   padding: 20px;
   font-size: 25px;
+  color: #7f7866;
 }
 
 a {
@@ -248,7 +249,7 @@ button {
 }
 
 main button:hover {
-  background-color: #777;
+  background-color: tomato;
   transform: scale(1.1);
   color: #fff !important;
 }
