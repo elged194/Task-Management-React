@@ -1,7 +1,7 @@
 .edit-task {
   min-height: calc(100vh - 128.64px);
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   flex-direction: column;
   padding: 20px;
 }
