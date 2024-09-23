@@ -24,10 +24,7 @@
   </p>
 </div>
 
-# My Advanced Blog
-
-## Live Demo
-[Project URL](https://new-project-level2.web.app/)
+## Live Demo [Project URL](https://new-project-level2.web.app/)
 
 <!-- ABOUT THE PROJECT -->
 ## About Task Management Project
