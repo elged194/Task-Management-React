@@ -24,8 +24,12 @@
   </p>
 </div>
 
-<!-- ABOUT THE PROJECT -->
+# My Advanced Blog
 
+## Live Demo
+[Project URL](https://new-project-level2.web.app/)
+
+<!-- ABOUT THE PROJECT -->
 ## About Task Management Project
 
 <img src="./img/Screenshot_17-4.jpeg">
